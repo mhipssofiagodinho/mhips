@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Table activity</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<!-- 	<link type="text/css" rel="stylesheet" href="https://gomelb.unimelb.edu.au/bbcswebdav/courses/EDUC90975_2018_TM4/code/css/subject.css">
+    <link type="text/css" rel="stylesheet" href="https://gomelb.unimelb.edu.au/bbcswebdav/courses/EDUC90975_2018_TM4/code/css/w3.css"> -->
+	<style type="text/css">
+		body {font: 400 .8em "Helvetica Neue",Helvetica,Arial,sans-serif;}
+        .printPagebtn {
+            background-color: #003366;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 0;
+            margin:2em 0;
+            border-radius: 4px;
+        }
+
+        .printPagebtn:hover {
+            color: #185184;
+            background-color: #CDCDCD;
+        }
+
+        @media print
+        {
+            .no-print, .no-print *
+            {
+                display: none !important;
+            }
+        }
+
+
+	</style>
+</head>
+<body>
+
+<div id="mainpage">
+    <ol class="case-response ">
+       <li>What is your school doing at the universal level (Tier 1) to support the mental health and wellbeing of all students<br>
+
+        <p><textarea class="GO-storedText" rows="8" style="width: 100%; height: 50px; resize: none;" placeholder="Type text here...">&nbsp;</textarea></p>
+
+
+       <li>What is your school doing to provide targeted support (Tier 2) for students considered at risk of mental health concerns?<br>
+        <p><textarea class="GO-storedText" rows="8" style="width: 100%; height: 50px; resize: none;" placeholder="Type text here...">&nbsp;</textarea></p>
+
+
+       <li>What is your school doing at the intensive support level (Tier 3) to support student mental health and wellbeing?<br>
+        <p><textarea class="GO-storedText" rows="8" style="width: 100%; height: 50px; resize: none;" placeholder="Type text here...">&nbsp;</textarea></p>
+    </ol>
+     <button onclick="myFunction()" class="printPagebtn no-print">Print responses</button>
+    <div id="getheight" style="clear:both;">
+</div>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://gomelb-dev1.its.unimelb.edu.au/static/global/iframeresize.js"></script>
+            <script type="text/javascript">
+                function noScroll(evt) { evt.preventDefault() }
+
+                    function resizePage() {
+
+
+                    mspace_resize_iframe(document.body.scrollHeight);
+                    }
+
+
+                    jQuery(document).ready(function () {
+                    setTimeout(function() {
+                        resizePage();
+                    },500)
+                  });
+
+                  jQuery("#expres1").click(function(){
+                      jQuery("#expresDiv1").css('display', 'block');
+                      resizePage();
+                  });
+
+                  jQuery("#expres2").click(function(){
+                      jQuery("#expresDiv2").css('display', 'block');
+                      resizePage();
+                  });
+
+                  jQuery("#expres3").click(function(){
+                      jQuery("#expresDiv3").css('display', 'block');
+                      resizePage();
+                  });
+
+                  jQuery("#expres4").click(function(){
+                      jQuery("#expresDiv4").css('display', 'block');
+                      resizePage();
+                  });
+
+                  jQuery("#expres5").click(function(){
+                      jQuery("#expresDiv5").css('display', 'block');
+                      resizePage();
+                  });
+              jQuery(window).resize(function(){
+                  mspace_resize_iframe(jQuery("#mainpage")[0].getBoundingClientRect().height + 35);
+              });
+                function myFunction() {
+                        window.print();
+                    }
+
+            </script>
+
+  </body>
+</html>
